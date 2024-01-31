@@ -1,0 +1,286 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding-top: 56px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .list-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .organization-list, .student-list {
+            width: 45%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="d-flex ms-auto">
+                    <button class="btn btn-outline-success me-2" type="button" onclick="redirectToRegistration()" >Register</button>
+                    <button class="btn btn-outline-primary me-2" type="button" onclick="redirectToSignIn()" >Sign In</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main >
+        <div class="list-container">
+            <div class="organization-list">
+                <h2>Organizations</h2>
+                <ul>
+                
+                    <li>Organization 1</li>
+                    <li>Organization 2</li>
+                    <li>Organization 3</li>
+                    <button class="btn btn-outline-primary me-2" type="button" onclick="redirectToOrganization()" >Add Organization</button>
+                </ul>
+            </div>
+            
+    
+            <div class="student-list">
+                <h2>Registered Students</h2>
+                <ul>
+                    
+                    <li>Student 1</li>
+                    <li>Student 2</li>
+                    <li>Student 3</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function redirectToRegistration() {
+            
+            window.location.href = "/registration";
+        }
+    </script>
+    <script>
+        function redirectToSignIn() {
+            
+            window.location.href = "/signin";
+        }
+    </script>
+    <script>
+        function redirectToOrganization() {
+            
+            window.location.href = "/organization";
+        }
+    </script>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            padding-top: 56px;
+            background-color: #f8f9fa;
+        }
+    
+        h1 {
+            text-align: center;
+        }
+    
+        .list-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+    
+        .organization-list, .student-list {
+            width: 45%;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    
+        .organization-list h2, .student-list h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+    
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+    
+        li {
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #495057;
+        }
+    
+        .btn-outline-custom {
+            color: #007bff;
+            border-color: #007bff;
+        }
+    
+        .btn-outline-custom:hover {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    
+        .organization-details, .student-details {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 20px;
+            width: 80%; /* Adjust the width as needed */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="d-flex ms-auto">
+                    <button class="btn btn-outline-success me-2" type="button" onclick="redirectToRegistration()">Register</button>
+                    <button class="btn btn-outline-custom me-2" type="button" onclick="redirectToSignIn()">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="list-container">
+            <div class="organization-list" id="organizationList">
+                <h2>Organizations</h2>
+                <button class="btn btn-outline-custom" type="button" onclick="redirectToOrganization()">Add Organization</button>
+                <div class="organization-details">
+                    <ul id="organizationsUl"></ul>
+                </div>
+            </div>
+            
+            <div class="student-list" id="studentsList">
+                <h2>Registered Students</h2>
+                <div class="student-details">
+                    <ul id="studentsUl"></ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function redirectToRegistration() {
+            window.location.href = "/registration";
+        }
+
+        function redirectToSignIn() {
+            window.location.href = "/signin";
+        }
+
+        function redirectToOrganization() {
+            window.location.href = "/organization";
+        }
+
+        // Fetch students data from the server
+        fetch('/students')
+            .then(response => response.json())
+            .then(students => {
+                const studentsUl = document.getElementById('studentsUl');
+
+                if (students && students.length > 0) {
+                    students.forEach(student => {
+                        const li = document.createElement('li');
+                        li.className = 'mb-3';
+                        li.innerHTML = `
+                            <strong>ID:</strong> ${student.idNumber}<br>
+                            <strong>Name:</strong> ${student.firstName} ${student.lastName}<br>
+                            <strong>Email:</strong> ${student.emailAddress}<br>
+                            <strong>Course:</strong> ${student.course}
+                        `;
+                        studentsUl.appendChild(li);
+                    });
+                } else {
+                    studentsUl.innerHTML = '<p>No students found.</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching students:', error);
+            });
+        
+        // Fetch organizations data from the server
+        fetch('/organizations')
+            .then(response => response.json())
+            .then(organizations => {
+                const organizationsUl = document.getElementById('organizationsUl');
+
+                if (organizations && organizations.length > 0) {
+                    organizations.forEach(organization => {
+                        const li = document.createElement('li');
+                        li.className = 'mb-3';
+                        li.innerHTML = `
+                            <strong>Name:</strong> ${organization.name}<br>
+                            <strong>AKA:</strong> ${organization.aka} <br>
+                            <strong>Description:</strong> ${organization.description}<br>
+                            
+                        `;
+                        organizationsUl.appendChild(li);
+                    });
+                } else {
+                    organizationsUl.innerHTML = '<p>No organizations found.</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching organizations:', error);
+            });
+            
+    </script>
+</body>
+</html>
